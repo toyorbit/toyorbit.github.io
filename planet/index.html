@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0a20">
+<meta name="description" content="ToyOrbit 행성 제작소. 색과 크기, 고리를 고르고 이름을 붙여 나만의 행성을 만들어 보세요.">
+<title>나만의 행성 만들기 · ToyOrbit</title>
+<link rel="stylesheet" href="planet.css"><script src="planet.js" defer></script>
+</head>
+<body>
+<header><a class="brand" href="../#inside" aria-label="ToyOrbit 실험실로 돌아가기"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="9" stroke="currentColor" stroke-width="1.5"/><ellipse cx="20" cy="20" rx="19" ry="6" transform="rotate(-32 20 20)" stroke="currentColor" stroke-width="1.5"/><circle cx="31" cy="10" r="3" fill="#ff9259"/></svg>ToyOrbit<span>.</span></a><a class="back" href="../#lab">← 실험실로</a></header>
+<main>
+<div class="heading"><div><p class="eyebrow">EXPERIMENT 001 / PLANET MAKER</p><h1>작은 행성,<br><span>커다란 상상.</span></h1><p class="intro">마음에 드는 색을 고르고 이름을 붙여주세요.<br>이 우주에는, 당신의 행성 하나쯤 들어갈 자리가 있어요.</p></div><span class="heading-doodle" aria-hidden="true">✧</span></div>
+<div class="studio">
+<section class="viewport" aria-label="행성 미리보기"><div class="preview-top"><span><i></i> LIVE ORBIT</span><span>TOYORBIT / OBSERVATORY</span></div><canvas id="planet" width="1200" height="1200" role="img" aria-label="귤빛 행성, 크기 60, 고리 있음. 이름: 오렌지 궤도">나만의 행성 미리보기. Canvas를 지원하는 브라우저에서 확인할 수 있습니다.</canvas><div class="preview-bottom"><span>YOUR VERY OWN LITTLE WORLD</span><span aria-hidden="true">+ 01</span></div></section>
+<form class="controls" id="controls">
+<div class="control-heading"><h2>행성 조종석</h2><span>MISSION: PLAY</span></div>
+<div class="field"><label for="planet-name"><span class="step">01</span>행성 이름</label><input id="planet-name" type="text" value="오렌지 궤도" maxlength="24" autocomplete="off" placeholder="어떤 이름이 어울릴까요?"><p class="hint">최대 24자 · 이름은 저장 이미지에도 들어가요.</p></div>
+<fieldset class="field"><legend><span class="step">02</span>행성의 색</legend><div class="swatches">
+<label class="swatch" style="--color:#ffac72"><input type="radio" name="palette" value="peach" checked><span class="color-dot"></span><span>귤빛</span></label>
+<label class="swatch" style="--color:#b69aff"><input type="radio" name="palette" value="violet"><span class="color-dot"></span><span>보랏빛</span></label>
+<label class="swatch" style="--color:#78bbff"><input type="radio" name="palette" value="blue"><span class="color-dot"></span><span>별빛 파랑</span></label>
+<label class="swatch" style="--color:#f89bc3"><input type="radio" name="palette" value="pink"><span class="color-dot"></span><span>분홍 안개</span></label>
+</div></fieldset>
+<div class="field"><label for="planet-size"><span><span class="step">03</span>행성 크기</span><output id="size-value" for="planet-size">60</output></label><input id="planet-size" type="range" min="20" max="100" value="60" step="1"><div class="range-labels"><span>작고 소중하게</span><span>존재감 있게</span></div></div>
+<div class="field ring-row"><div><label for="planet-ring"><span class="step">04</span>반짝이는 고리</label><p class="hint">행성에도 액세서리가 필요하니까.</p></div><label class="switch"><input id="planet-ring" type="checkbox" checked><span class="switch-track" aria-hidden="true"></span><span class="sr-only">행성 고리</span></label></div>
+<div class="actions"><button class="save" type="button" id="save">내 행성 저장하기 <span aria-hidden="true">↓</span></button><button class="random" type="button" id="random">✧ 우주에 맡겨보기</button></div>
+<p id="status" class="status" role="status" aria-live="polite">PNG 이미지 · 1200 × 1200</p>
+</form>
+</div>
+<p class="footnote">작은 실험에는 정답이 없어요. 마음껏 바꿔보세요.</p>
+<noscript><p class="no-script">행성을 만들려면 브라우저에서 JavaScript를 켜 주세요.</p></noscript>
+</main>
+<footer><span>© <span id="year">2026</span> ToyOrbit</span><span>SMALL IDEAS. INFINITE PLAY.</span></footer>
+</body></html>
